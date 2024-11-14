@@ -204,6 +204,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView">
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/addmenu"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -218,6 +219,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/setontouch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="28dp"
@@ -240,7 +242,9 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/cardView6"
         app:layout_constraintTop_toTopOf="@+id/cardView6">
+
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/allitemMenu"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
