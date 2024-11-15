@@ -5,13 +5,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.adminpanel.databinding.ActivityAddItemBinding
+import com.example.adminpanel.databinding.ActivityAddItem2Binding
 
-class add_item : AppCompatActivity() {
-    private val binding: ActivityAddItemBinding by lazy {
-        ActivityAddItemBinding.inflate(layoutInflater)
+
+class Add_item2 : AppCompatActivity() {
+    private val binding: ActivityAddItem2Binding by lazy {
+        ActivityAddItem2Binding.inflate(layoutInflater)
     }
 
 

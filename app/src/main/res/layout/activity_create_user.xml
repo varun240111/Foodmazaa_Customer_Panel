@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateUserActivity">
+
+    <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp">
+
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Navigate back"
+                android:padding="12dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/left_arrow" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="Jain Palace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo1" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/yeon_sung"
+
+            android:text="Waves Of Food"
+            android:textSize="40sp"
+            app:layout_constraintTop_toBottomOf="@id/imageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/subtitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Create New User Admin"
+            android:fontFamily="@font/yeon_sung"
+
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/titleTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:autofillHints=" Name Of Owner"
+            android:background="@color/white"
+            android:drawableStart="@drawable/crate_user"
+            android:drawablePadding="15dp"
+            android:elevation="2dp"
+            android:fontFamily="@font/lato"
+            android:hint=" Name Of Owner"
+            android:inputType="textPassword"
+            android:outlineSpotShadowColor="@color/text"
+            android:paddingLeft="15dp"
+            app:layout_constraintEnd_toEndOf="@id/subtitleTextView"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintStart_toStartOf="@id/subtitleTextView"
+            app:layout_constraintTop_toBottomOf="@id/subtitleTextView" />
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="20dp"
+            android:autofillHints=" Email"
+            android:background="@color/white"
+            android:drawableStart="@drawable/mail"
+            android:drawablePadding="15dp"
+            android:elevation="2dp"
+            android:hint=" Email"
+            android:fontFamily="@font/lato"
+
+            android:inputType="textPassword"
+            android:outlineSpotShadowColor="@color/text"
+            android:paddingLeft="15dp"
+            app:layout_constraintEnd_toEndOf="@id/name"
+            app:layout_constraintHorizontal_bias="0.636"
+            app:layout_constraintStart_toStartOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="20dp"
+            android:autofillHints=" Passward"
+            android:background="@color/white"
+            android:drawableStart="@drawable/lock2"
+            android:drawablePadding="15dp"
+            android:elevation="2dp"
+            android:hint=" Passward"
+            android:fontFamily="@font/lato"
+
+            android:inputType="textPassword"
+            android:outlineSpotShadowColor="@color/text"
+            android:paddingLeft="15dp"
+            app:layout_constraintEnd_toEndOf="@id/emailEditText"
+            app:layout_constraintHorizontal_bias="0.636"
+            app:layout_constraintStart_toStartOf="@id/emailEditText"
+            app:layout_constraintTop_toBottomOf="@id/emailEditText" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/Createbutton"
+            android:layout_width="157dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/text"
+            android:fontFamily="@font/yeon_sung"
+            android:outlineSpotShadowColor="@color/text"
+            android:text="Create New User"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/passwordEditText"
+            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
+
+        <TextView
+            android:id="@+id/footerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="Design by\n Group 3"
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

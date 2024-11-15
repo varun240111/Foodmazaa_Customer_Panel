@@ -78,13 +78,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:src="@drawable/att"
-                app:layout_constraintBottom_toTopOf="@+id/textView"
-                app:layout_constraintEnd_toEndOf="@+id/textView"
-                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintBottom_toTopOf="@+id/PendingodertextView"
+                app:layout_constraintEnd_toEndOf="@+id/PendingodertextView"
+                app:layout_constraintStart_toStartOf="@+id/PendingodertextView"
                 app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/PendingodertextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
@@ -106,10 +106,10 @@
                 android:text="30"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="@+id/PendingodertextView"
                 app:layout_constraintHorizontal_bias="0.409"
-                app:layout_constraintStart_toStartOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                app:layout_constraintStart_toStartOf="@+id/PendingodertextView"
+                app:layout_constraintTop_toBottomOf="@+id/PendingodertextView" />
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -134,7 +134,7 @@
                 android:text="Completed \n Order"
                 android:textAlignment="center"
                 android:textColor="@color/text"
-                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintStart_toEndOf="@+id/PendingodertextView"
                 app:layout_constraintTop_toBottomOf="@+id/imageView3"
                 tools:ignore="MissingConstraints" />
 
@@ -282,6 +282,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView6">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profilebutton"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -320,6 +321,7 @@
         app:layout_constraintTop_toTopOf="@+id/cardView7">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/CrateUser"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -355,7 +357,9 @@
         app:cardCornerRadius="15dp"
         app:layout_constraintStart_toStartOf="@+id/cardView7"
         app:layout_constraintTop_toBottomOf="@+id/cardView7">
+
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/outFordelivery"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 

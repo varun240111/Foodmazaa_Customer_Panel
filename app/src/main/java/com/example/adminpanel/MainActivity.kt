@@ -13,13 +13,28 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         binding.addmenu.setOnClickListener {
-            val intent= Intent(this,add_item::class.java)
+            val intent= Intent(this,Add_item2::class.java)
             startActivity(intent)
         }
         binding.allitemMenu.setOnClickListener {
             val intent= Intent(this,AllItemActivity::class.java)
             startActivity(intent)
         }
-
+        binding.outFordelivery.setOnClickListener {
+            val intent= Intent(this,OutForDeliveryActivity::class.java)
+            startActivity(intent)
+        }
+        binding.profilebutton.setOnClickListener {
+            val intent= Intent(this,AdminProfileActivity::class.java)
+            startActivity(intent)
+        }
+        binding.CrateUser.setOnClickListener {
+            val intent= Intent(this,CreateUserActivity::class.java)
+            startActivity(intent)
+        }
+        binding.PendingodertextView.setOnClickListener {
+            val intent= Intent(this,PendingorderActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
