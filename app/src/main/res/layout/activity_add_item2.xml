@@ -45,7 +45,7 @@
                 app:layout_constraintTop_toTopOf="@+id/backButton" />
 
             <EditText
-                android:id="@+id/enterproductname"
+                android:id="@+id/foodName"
                 android:layout_width="0dp"
                 android:layout_height="57dp"
                 android:layout_marginStart="8dp"
@@ -63,7 +63,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
             <EditText
-                android:id="@+id/enterproductprice"
+                android:id="@+id/foodPrice"
                 android:layout_width="0dp"
                 android:layout_height="57dp"
                 android:layout_marginTop="24dp"
@@ -74,9 +74,9 @@
                 android:inputType="text"
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/enterproductname"
-                app:layout_constraintStart_toStartOf="@+id/enterproductname"
-                app:layout_constraintTop_toBottomOf="@+id/enterproductname" />
+                app:layout_constraintEnd_toEndOf="@+id/foodName"
+                app:layout_constraintStart_toStartOf="@+id/foodName"
+                app:layout_constraintTop_toBottomOf="@+id/foodName" />
 
             <TextView
                 android:id="@+id/selectImage"
@@ -92,10 +92,10 @@
                 android:text="Select Image"
 
                 android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="@+id/enterproductprice"
+                app:layout_constraintEnd_toEndOf="@+id/foodPrice"
                 app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="@+id/enterproductprice"
-                app:layout_constraintTop_toBottomOf="@+id/enterproductprice" />
+                app:layout_constraintStart_toStartOf="@+id/foodPrice"
+                app:layout_constraintTop_toBottomOf="@+id/foodPrice" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView2"
@@ -141,7 +141,7 @@
                 android:layout_marginTop="12dp"
                 android:background="@color/white"
                 android:fontFamily="@font/lato"
-                android:text="Lorem ipsum dolor sit amet,consectetur adipiscing elitsed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad "
+                android:hint="Add Description Here"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="@+id/textView20"
@@ -159,7 +159,7 @@
                 android:fontFamily="@font/yeon_sung"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
-                android:text="Short Description"
+                android:text="Ingredient"
                 android:textColor="@color/black"
                 android:textSize="17sp"
                 app:layout_constraintEnd_toEndOf="@+id/description"
@@ -173,7 +173,7 @@
                 android:layout_marginTop="8dp"
                 android:background="@color/white"
                 android:fontFamily="@font/lato"
-                android:text="Noddle\nSalad\nBurger\nHerbal\nPan Cake\nMomos"
+                android:hint="Add Ingredients Here"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="@+id/cardView2"
                 app:layout_constraintStart_toStartOf="@+id/textView21"
