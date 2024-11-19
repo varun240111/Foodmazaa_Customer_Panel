@@ -89,7 +89,7 @@
             app:layout_constraintTop_toBottomOf="@id/subtitleTextView" />
 
         <EditText
-            android:id="@+id/emailEditText"
+            android:id="@+id/Email1"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginStart="20dp"
@@ -130,10 +130,10 @@
             android:inputType="textPassword"
             android:outlineSpotShadowColor="@color/text"
             android:paddingLeft="15dp"
-            app:layout_constraintEnd_toEndOf="@id/emailEditText"
+            app:layout_constraintEnd_toEndOf="@id/Email1"
             app:layout_constraintHorizontal_bias="0.636"
-            app:layout_constraintStart_toStartOf="@id/emailEditText"
-            app:layout_constraintTop_toBottomOf="@id/emailEditText" />
+            app:layout_constraintStart_toStartOf="@id/Email1"
+            app:layout_constraintTop_toBottomOf="@id/Email1" />
 
 
         <androidx.appcompat.widget.AppCompatButton

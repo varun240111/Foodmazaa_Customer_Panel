@@ -14,14 +14,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo1" />
+            app:srcCompat="@drawable/logo_whatsapp" />
 
         <TextView
             android:id="@+id/titleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/yeon_sung"
-            android:text="Waves Of Food"
+            android:text="Foodmazaa"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -69,13 +69,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/locationTextView">
 
-            <AutoCompleteTextView
-                android:id="@+id/ListOfLocation"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Choose Location"
-                android:inputType="none"
-                android:fontFamily="@font/lato" />
+                <AutoCompleteTextView
+                    android:id="@+id/ListOfLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Choose Location"
+                    android:inputType="none"
+                    android:fontFamily="@font/lato" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <EditText
@@ -121,7 +121,7 @@
             app:layout_constraintTop_toBottomOf="@id/name" />
 
         <EditText
-            android:id="@+id/emailEditText"
+            android:id="@+id/Email1"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginStart="20dp"
@@ -142,7 +142,7 @@
             app:layout_constraintTop_toBottomOf="@id/nameofresturent" />
 
         <EditText
-            android:id="@+id/passwordEditText"
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginStart="20dp"
@@ -158,51 +158,39 @@
             android:inputType="textPassword"
             android:outlineSpotShadowColor="@color/text"
             android:paddingLeft="15dp"
-            app:layout_constraintEnd_toEndOf="@id/emailEditText"
-            app:layout_constraintStart_toStartOf="@id/emailEditText"
-            app:layout_constraintTop_toBottomOf="@id/emailEditText" />
+            app:layout_constraintEnd_toEndOf="@id/Email1"
+            app:layout_constraintStart_toStartOf="@id/Email1"
+            app:layout_constraintTop_toBottomOf="@id/Email1" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/Createbutton"
+            android:id="@+id/createbutton"
             android:layout_width="157dp"
             android:layout_height="57dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="40dp"
             android:backgroundTint="@color/text"
             android:fontFamily="@font/yeon_sung"
             android:outlineSpotShadowColor="@color/text"
             android:text="Create Account"
+            android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textAlignment="center"
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@id/passwordEditText"
+            app:layout_constraintEnd_toEndOf="@id/password"
+            app:layout_constraintHorizontal_bias="0.504"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
+            app:layout_constraintTop_toBottomOf="@id/password" />
 
         <TextView
             android:id="@+id/alreadyAccountTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="44dp"
             android:fontFamily="@font/yeon_sung"
             android:text="Already Have an Account?"
             android:textAlignment="center"
             android:textColor="@color/text"
-            app:layout_constraintEnd_toEndOf="@+id/Createbutton"
-            app:layout_constraintStart_toStartOf="@+id/Createbutton"
-            app:layout_constraintTop_toBottomOf="@id/Createbutton" />
+            app:layout_constraintEnd_toEndOf="@+id/createbutton"
+            app:layout_constraintStart_toStartOf="@+id/createbutton"
+            app:layout_constraintTop_toBottomOf="@id/createbutton" />
 
-        <TextView
-            android:id="@+id/footerTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:text="Design by\n Group 3"
-            android:fontFamily="@font/yeon_sung"
-            android:textAlignment="center"
-            android:textColor="@color/text"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

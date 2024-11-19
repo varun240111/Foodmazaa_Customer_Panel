@@ -1,20 +1,19 @@
 package com.example.adminpanel.adapter
 
 import android.content.Context
-import android.net.Uri
+import android.graphics.BitmapFactory
+import android.util.Base64
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.example.adminpanel.databinding.ItemItem2Binding
 import com.example.adminpanel.model.AllMenu
 import com.google.firebase.database.DatabaseReference
 
 class MenuItemAdapter(
-
     private val context: Context,
     private val menuList: ArrayList<AllMenu>,
-    databaseReference: DatabaseReference
+    private val databaseReference: DatabaseReference
 ) : RecyclerView.Adapter<MenuItemAdapter.AddItemViewHolder>() {
 
     private val itemQuantities = IntArray(menuList.size) { 1 } // Initialize quantity to 1 for each item
@@ -27,24 +26,34 @@ class MenuItemAdapter(
     override fun getItemCount(): Int = menuList.size
 
     override fun onBindViewHolder(holder: AddItemViewHolder, position: Int) {
-        holder.bind(position)
+        holder.bind(menuList[position], position)
     }
 
-    inner class AddItemViewHolder(private val binding: ItemItem2Binding) : RecyclerView.ViewHolder(binding.root) {
+    inner class AddItemViewHolder(private val binding: ItemItem2Binding) :
+        RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(position: Int) {
+        fun bind(menuItem: AllMenu, position: Int) {
             binding.apply {
-                val quantity = itemQuantities[position]
-                val menuItems = menuList[position]
-                val uriString = menuItems.foodImage
-                val uri = Uri.parse(uriString)
-
-                customername.text = menuItems.foodName
-                priceTextView.text = menuItems.foodPrice
-                Glide.with(context).load(uri).into(orderfoodImage)
+                // Display text data
+                customername.text = menuItem.foodName
+                priceTextView.text = menuItem.foodPrice
                 quantityTextView.text = itemQuantities[position].toString()
 
-                // Set up button click listeners
+                // Decode and set the Base64 image
+                val base64Image = menuItem.foodImage
+                if (!base64Image.isNullOrEmpty()) {
+                    try {
+                        val decodedBytes = Base64.decode(base64Image, Base64.DEFAULT)
+                        val bitmap = BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.size)
+                        orderfoodImage.setImageBitmap(bitmap)
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                        orderfoodImage.setImageResource(android.R.color.transparent) // Fallback
+                    }
+                } else {
+                    orderfoodImage.setImageResource(android.R.color.transparent) // Fallback
+                }
+                // Button actions
                 minusButton.setOnClickListener { decreaseQuantity(position) }
                 plusButton.setOnClickListener { increaseQuantity(position) }
                 Accpetbutton.setOnClickListener { deleteItem(position) }
@@ -65,9 +74,8 @@ class MenuItemAdapter(
             }
         }
 
+
         private fun deleteItem(position: Int) {
-            menuList.removeAt(position)
-            menuList.removeAt(position)
             menuList.removeAt(position)
             notifyItemRemoved(position)
             notifyItemRangeChanged(position, menuList.size)

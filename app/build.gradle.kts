@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("com.google.gms.google-services")
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -41,20 +41,21 @@ android {
 }
 
 dependencies {
-
+    implementation(platform(libs.firebase.bom))
+    implementation (libs.facebook.android.sdk)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.cardview)
-    implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
-    implementation("com.google.firebase:firebase-analytics")
+    implementation(libs.play.services.auth)
+    implementation(libs.glide)
+    implementation(libs.androidx.core.ktx.v1101)
+    implementation(libs.play.services.base)
+    implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
-    implementation(libs.firebase.auth.ktx)
-    implementation("com.github.bumptech.glide:glide:4.16.0")
-    implementation("androidx.core:core-ktx:1.10.1")
-    implementation(libs.firebase.storage.ktx)
+    implementation(libs.firebase.storage)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

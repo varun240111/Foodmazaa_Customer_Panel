@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Adminpanel</string>
+    <string name="default_web_client_id"><![CDATA[<resources>\n    <string name=\"app_name\">Admin panel</string>\n    <string name=\"default_web_client_id\">997935654402-0nfgu46iakp2230can1gmulc0c8ho81f.apps.googleusercontent.com</string>\n</resources>\n]]></string>
+    <string name="authentication_failed"><![CDATA[<resources>\n    <string name=\"auth_failed\">Authentication failed. Please try again.</string>\n</resources>\n]]></string>
+
+    <string name="facebook_app_id">553927777499055</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+
 </resources>

@@ -12,7 +12,7 @@
         android:layout_width="310dp"
         android:layout_height="202dp"
         android:layout_marginTop="100dp"
-        app:srcCompat="@drawable/logo1"
+        app:srcCompat="@drawable/logo_whatsapp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/yeon_sung"
-        android:text="Waves Of Food"
+        android:text="Foodmazaa"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -47,14 +47,14 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/yeon_sung"
         android:text="Design by\n Group 3"
         android:textAlignment="center"
         android:textColor="@color/text"
         android:textSize="16sp"
-        android:fontFamily="@font/yeon_sung"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="668dp"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
